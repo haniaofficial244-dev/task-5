@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Horse Gallery</title>
+    <style>
+        nav { background: #004d40; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .gallery img { width: 300px; height: 200px; margin: 10px; cursor: pointer; border-radius: 8px; border: 2px solid #004d40; }
+        body { font-family: sans-serif; text-align: center; }
+    </style>
 </head>
-<body style="text-align: center;">
+<body>
 
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="lion.html">Lion</a> | 
-        <a href="horse.html">Horse</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="lion.html">Lion</a>
+    <a href="horse.html">Horse</a>
+</nav>
 
-    <h1>Horse Gallery</h1>
-
-    <section>
-        <a href="horse1.jpg" target="_blank">
-            <img src="horse1.jpg" width="300" height="300" style="border: 1px solid #ccc; margin: 10px;">
-        </a>
-        <br>
-        <a href="horse1.jpg" download>Download Image 1</a>
-        <br><br>
-
-        </section>
+<h1>Horse Images</h1>
+<div class="gallery">
+    <a href="view.html?img=https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1000">
+        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1000" alt="Horse 1">
+    </a>
+    <a href="view.html?img=https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?q=80&w=1000">
+        <img src="https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?q=80&w=1000" alt="Horse 2">
+    </a>
+</div>
 
 </body>
 </html>
