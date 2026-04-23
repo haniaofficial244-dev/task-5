@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View & Download</title>
+    <style>
+        nav { background: #004d40; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        body { font-family: sans-serif; text-align: center; padding-bottom: 50px; }
+        #bigImage { max-width: 80%; border-radius: 15px; margin-top: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .down-btn { display: inline-block; margin-top: 20px; padding: 15px 30px; background: #004d40; color: white; text-decoration: none; font-weight: bold; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="lion.html">Lion</a>
+    <a href="horse.html">Horse</a>
+</nav>
+
+<img id="bigImage" src="" alt="Full View">
+<br>
+<a id="downloadLink" href="" download="animal_image.jpg" class="down-btn">Download Image</a>
+
+<script>
+    // URL se image link nikalne ka logic
+    const params = new URLSearchParams(window.location.search);
+    const imageUrl = params.get('img');
+    
+    if (imageUrl) {
+        document.getElementById('bigImage').src = imageUrl;
+        document.getElementById('downloadLink').href = imageUrl;
+    }
+</script>
+
+</body>
+</html>
